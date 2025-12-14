@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->enum('type', ['dona', 'metr'])->default('dona');
+            $table->string('image')->nullable();
+            $table->unsignedBigInteger('row-1')->default(0);
+            $table->unsignedBigInteger('row-2')->default(0);
+            $table->unsignedBigInteger('row-3')->default(0);
+            $table->unsignedBigInteger('row-4')->default(0);
+            $table->unsignedBigInteger('row-5')->default(0);
             $table->timestamps();
         });
     }
