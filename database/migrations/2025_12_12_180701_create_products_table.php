@@ -23,6 +23,11 @@ return new class extends Migration
             $table->unsignedBigInteger('row-3')->default(0);
             $table->unsignedBigInteger('row-4')->default(0);
             $table->unsignedBigInteger('row-5')->default(0);
+            $table->unsignedBigInteger('row-6')->default(0);
+            $table->unsignedBigInteger('row-7')->default(0);
+            $table->unsignedBigInteger('row-8')->default(0);
+            $table->unsignedBigInteger('row-9')->default(0);
+            $table->unsignedBigInteger('row-10')->default(0);
             $table->timestamps();
         });
     }
